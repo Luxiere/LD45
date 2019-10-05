@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SunlightBar : MonoBehaviour
 {
+
     [SerializeField] int maxLightPoints = 100;
     [SerializeField] int gainRate = 3;
 
@@ -16,6 +17,12 @@ public class SunlightBar : MonoBehaviour
     }
 
     private void Update()
+    {
+        if (!DayNightCycle.isDay) return;
+        GainLight();
+    }
+
+    private void GainLight()
     {
         currentTimer -= Time.deltaTime;
         if (currentTimer <= 0)
