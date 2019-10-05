@@ -22,11 +22,9 @@ public class DayNightCycle : MonoBehaviour
         init_Rot = transform.rotation.eulerAngles;
     }
 
-
     void Update()
     {
         Cycle();
-        Debug.Log(isDay);
     }
 
     private void Cycle()

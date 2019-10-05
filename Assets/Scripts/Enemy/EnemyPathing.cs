@@ -15,7 +15,7 @@ public class EnemyPathing : MonoBehaviour
 
     public int GetNextWaypoint(int i)
     {
-        if (i + 1 == transform.childCount) { return 0; }
+        if (i + 1 == transform.childCount) { return -1; }
         return i + 1;
     }
 

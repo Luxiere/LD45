@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "Enemy Stats", menuName = "Game/Enemy/Stat")]
 public class EnemyStats : ScriptableObject
 {
-    [SerializeField] int damage = 20;
-    [SerializeField] float speed = 5f;
-    [SerializeField] EnemyPathing pathing = null;
+    public int damage = 20;
+    public float speed = 5f;
 
     public void TakeDamage()
     {

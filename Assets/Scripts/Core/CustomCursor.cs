@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "Cursors", menuName = "Game/Cursors")]
 public class CustomCursor : ScriptableObject
 {
     [System.Serializable]
