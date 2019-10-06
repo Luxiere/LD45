@@ -5,10 +5,17 @@ using UnityEngine.UI;
 
 public class WaterUI : MonoBehaviour
 {
-    [SerializeField] RectTransform foreground = null;
+    Image foreground;
+    WaterBar player;
+
+    private void Awake()
+    {
+        player = GameObject.FindWithTag("Player").GetComponent<WaterBar>();
+        foreground = GetComponent<Image>();
+    }
+
     private void Update()
     {
-        Vector3 healthBarScale = foreground.localScale;
-        foreground.localScale = new Vector3(healthBarScale.x, GetComponent<WaterBar>().GetWaterFraction(), healthBarScale.z);
+        foreground.fillAmount = player.GetWaterFraction();
     }
 }
