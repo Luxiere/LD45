@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class WaterBar : MonoBehaviour
 {
-    [SerializeField] int maxHealthPoints = 100;
-    [SerializeField] int decayRate = 5;
+    [SerializeField] float maxHealthPoints = 100;
+    [SerializeField] float decayRate = 5;
 
-    int currentHealthPoints;
+    float currentHealthPoints;
     float currentTimer = 1f; //decayRate is per second
 
     void Start()
@@ -16,14 +16,9 @@ public class WaterBar : MonoBehaviour
         currentHealthPoints = maxHealthPoints;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        currentTimer -= Time.deltaTime;
-        if (currentTimer <= 0)
-        {
-            LoseWater(decayRate);
-            currentTimer = 1f;
-        }
+        LoseWater(decayRate / 50);
     }
 
     private void DeathCheck()
@@ -36,12 +31,12 @@ public class WaterBar : MonoBehaviour
 
     public float GetWaterFraction() { return currentHealthPoints / maxHealthPoints; }
 
-    public void AddWater(int value)
+    public void AddWater(float value)
     {
         currentHealthPoints = Mathf.Min(currentHealthPoints += value, maxHealthPoints);
     }
 
-    public void LoseWater(int value)
+    public void LoseWater(float value)
     {
         currentHealthPoints = Mathf.Max(currentHealthPoints -= value, 0);
         DeathCheck();
