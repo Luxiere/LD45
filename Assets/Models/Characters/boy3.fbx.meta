@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d76843fd989771042906d9cefad7c45c
+guid: d9ef72ac46fa6334db7ed339b387d7fa
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable:
@@ -22,11 +22,17 @@ ModelImporter:
       74: -2108476173976532896
     second: Armature|Walking.001
   - first:
+      74: 8610375296668905137
+    second: Armature|Walking.002
+  - first:
       74: -4872597060481024711
     second: BezierCurve|Action
   - first:
       74: 1016110808653482218
     second: BezierCurve|BezierCurveAction
+  - first:
+      74: -8108413803205750282
+    second: BezierCurve|PickUp
   - first:
       74: -6379075005750800374
     second: BezierCurve|Watering
@@ -64,6 +70,35 @@ ModelImporter:
       internalID: 0
       firstFrame: 0
       lastFrame: 122
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Walking
+      takeName: Armature|Walking
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 90
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
