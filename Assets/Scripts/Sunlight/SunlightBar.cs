@@ -11,18 +11,12 @@ public class SunlightBar : MonoBehaviour
     int currentLightPoints;
     float currentTimer = 1f; //gainRate is per second
 
-    void Start()
+    public int GetCurrentPoints()
     {
-        currentLightPoints = maxLightPoints;
+        return currentLightPoints;
     }
 
-    private void Update()
-    {
-        if (!DayNightCycle.isDay) return;
-        GainLight();
-    }
-
-    private void GainLight()
+    public void GainLight()
     {
         currentTimer -= Time.deltaTime;
         if (currentTimer <= 0)
