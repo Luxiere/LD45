@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class Plant : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] Transform spawnLocation = null;
+
+    Animator animator;
+
+    private void Awake()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Grow()
     {
-        
+        animator.SetTrigger("grow");
+    }
+
+    public void Spawn(GameObject prefab)
+    {
+        Instantiate(prefab, spawnLocation.position, prefab.transform.rotation);
     }
 }
