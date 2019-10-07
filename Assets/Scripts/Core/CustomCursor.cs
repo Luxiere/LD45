@@ -13,7 +13,7 @@ public class CustomCursor : ScriptableObject
         public Vector2 hotspot;
     }
 
-    [SerializeField] CursorMapping[] cursorMappings;
+    [SerializeField] CursorMapping[] cursorMappings = null;
     public void SetCursor(CursorType type)
     {
         CursorMapping mapping = GetCursorMapping(type);

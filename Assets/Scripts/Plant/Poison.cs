@@ -5,6 +5,7 @@ using UnityEngine;
 public class Poison : MonoBehaviour
 {
     [SerializeField] float activeTime = 20f;
+    [SerializeField] ParticleSystem bubble = null;
     [SerializeField] GameObject button = null;
 
     float currentActiveTime = Mathf.Infinity;
@@ -22,10 +23,12 @@ public class Poison : MonoBehaviour
     private void OnDisable()
     {
         button.SetActive(true);
+        bubble.Stop();
     }
 
     private void OnEnable()
     {
         button.SetActive(false);
+        bubble.Play();
     }
 }

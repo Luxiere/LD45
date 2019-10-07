@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BirdAni : MonoBehaviour
 {
-    [SerializeField] Bird bird;
+    [SerializeField] Bird bird = null;
     public void NoPeck()
     {
         bird.NoPeck();
