@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class MouseControl : MonoBehaviour
 {
-    [SerializeField] float smoothTime = 5f;
     [SerializeField] float XSensitivity = 2f;
     [SerializeField] CustomCursor customCursor = null;
 
