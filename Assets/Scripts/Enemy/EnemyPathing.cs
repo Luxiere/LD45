@@ -6,10 +6,9 @@ public class EnemyPathing : MonoBehaviour
 {
     private void OnDrawGizmos()
     {
-        for (int i = 0; i < transform.childCount; i++)
+        for (int i = 0; i < transform.childCount - 1; i++)
         {
-            int j = GetNextWaypoint(i);
-            Gizmos.DrawLine(GetWaypoint(j), GetWaypoint(i));
+            Gizmos.DrawLine(GetWaypoint(i + 1), GetWaypoint(i));
         }
     }
 

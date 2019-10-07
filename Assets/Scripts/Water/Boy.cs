@@ -12,14 +12,17 @@ public class Boy : MonoBehaviour
 
     public UnityEvent waterEvent = null;
     public UnityEvent stopWatering = null;
+    public UnityEvent returned = null;
 
     private bool firstFrame = true;
 
+    Animator animator;
     WaterBar waterBar;
     Vector3 init_pos;
 
     private void Start()
     {
+        animator = GetComponent<Animator>();
         init_pos = transform.position;
     }
 
@@ -30,18 +33,30 @@ public class Boy : MonoBehaviour
             yield return null;
         }
 
-        waterEvent.Invoke();
+        animator.SetBool("watering", true);
 
         yield return new WaitForSeconds(waterTime);
-
-        stopWatering.Invoke();
         agent.isStopped = false;
 
+        stopWatering.Invoke();
+        animator.SetBool("watering", false);
 
         while (!MoveTowards(init_pos))
         {
             yield return null;
         }
+        returned.Invoke();
+    }
+
+    public void Reset()
+    {
+        agent.enabled = false;
+        agent.enabled = true;
+    }
+
+    public void Water()
+    {
+        waterEvent.Invoke();
     }
 
     private bool MoveTowards(Vector3 destination)
