@@ -43,7 +43,7 @@ public class MouseControl : MonoBehaviour
             m_cursorIsLocked = false;
         }
         UpdateCursorLock();
-        return false;
+        return m_cursorIsLocked;
     }
 
     private void UpdateCursorLock()
@@ -51,7 +51,6 @@ public class MouseControl : MonoBehaviour
         if (m_cursorIsLocked)
         {
             Cursor.lockState = CursorLockMode.Locked;
-
         }
         else
         {

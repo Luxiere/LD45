@@ -29,16 +29,26 @@ public class OrnamentsController : MonoBehaviour
         plant = GameObject.FindWithTag("Player").GetComponent<WaterBar>();
         boy = GameObject.FindWithTag("Boy").GetComponent<Boy>();
     }
+    private void Start()
+    {
+        maxWaterIntervalTime = GetWaterTime();
+    }
 
     private void Update()
     {
+        Debug.Log(maxWaterIntervalTime);
         currentWaterIntervalTime += Time.deltaTime;
         if (currentWaterIntervalTime >= maxWaterIntervalTime && !isWatering)
         {
-            currentWaterIntervalTime = 0;
             Water();
-            maxWaterIntervalTime = GetWaterTime();
+            Debug.Log("Water");
         }
+    }
+
+    public void ResetWaterTime()
+    {
+        currentWaterIntervalTime = 0;
+        maxWaterIntervalTime = GetWaterTime();
     }
 
     private void Water()
@@ -48,7 +58,7 @@ public class OrnamentsController : MonoBehaviour
         StartCoroutine(boy.WaterRoutine());
     }
 
-    private void CanWater()
+    public void CanWater()
     {
         isWatering = false;
     }
