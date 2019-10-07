@@ -8,10 +8,10 @@ public class WaterBar : MonoBehaviour
     [SerializeField] float maxHealthPoints = 100;
     [SerializeField] float decayRate = 5;
 
-    float currentHealthPoints;
+    float currentHealthPoints = Mathf.Infinity;
     float currentTimer = 1f; //decayRate is per second
 
-    void Start()
+    void Awake()
     {
         currentHealthPoints = maxHealthPoints;
     }
