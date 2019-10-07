@@ -610,8 +610,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b45c340743020f4da0c7c089a70409a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  daytime: 10
-  nighttime: 5
+  daytime: 60
+  nighttime: 30
 --- !u!1 &239741492
 GameObject:
   m_ObjectHideFlags: 0
@@ -6026,6 +6026,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 696090469}
+  - component: {fileID: 696090470}
   m_Layer: 0
   m_Name: Core
   m_TagString: Untagged
@@ -6051,6 +6052,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &696090470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696090468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea4a730b722c2cf489d4a214167c41c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  presistentObjectPrefab: {fileID: 4251428076904593643, guid: 4eee96c0299082e4491d080d002e07a7,
+    type: 3}
 --- !u!1 &703306131
 GameObject:
   m_ObjectHideFlags: 0
@@ -9648,6 +9663,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 457453558238173013, guid: b9d53db182e441041be385f66f02c1c9,
         type: 3}
+      propertyPath: lightPrices.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 457453558238173013, guid: b9d53db182e441041be385f66f02c1c9,
+        type: 3}
       propertyPath: events.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1216964756}
@@ -9659,7 +9679,17 @@ PrefabInstance:
     - target: {fileID: 457453558238173013, guid: b9d53db182e441041be385f66f02c1c9,
         type: 3}
       propertyPath: lightPrices.Array.data[1]
-      value: 60
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 457453558238173013, guid: b9d53db182e441041be385f66f02c1c9,
+        type: 3}
+      propertyPath: lightPrices.Array.data[3]
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 457453558238173013, guid: b9d53db182e441041be385f66f02c1c9,
+        type: 3}
+      propertyPath: lightPrices.Array.data[2]
+      value: 70
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9d53db182e441041be385f66f02c1c9, type: 3}

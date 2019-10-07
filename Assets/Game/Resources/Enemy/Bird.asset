@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48147071566020e468255072c43ef540, type: 3}
   m_Name: Bird
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 50
   speed: 15
