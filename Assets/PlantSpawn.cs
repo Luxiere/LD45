@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class PlantSpawn : MonoBehaviour
 {
-    [SerializeField] GameObject[] plants = null;
+    public GameObject[] plants = null;
 
-    private void Spawning(int spawnIndex)
+    public GameObject Spawning(int spawnIndex)
     {
-        GameObject spawnling = Instantiate(plants[spawnIndex], transform.position, transform.rotation);
+        GameObject spawnling = Instantiate(plants[spawnIndex], plants[spawnIndex].transform.position, plants[spawnIndex].transform.rotation);
         spawnling.transform.parent = transform;
+        return spawnling;
     }
 }

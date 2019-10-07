@@ -36,13 +36,16 @@ public class OrnamentsController : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(maxWaterIntervalTime);
         currentWaterIntervalTime += Time.deltaTime;
         if (currentWaterIntervalTime >= maxWaterIntervalTime && !isWatering)
         {
             Water();
-            Debug.Log("Water");
         }
+    }
+
+    public void AddOrnamentPoints(int value)
+    {
+        currentOrnamentPoints += value;
     }
 
     public void ResetWaterTime()

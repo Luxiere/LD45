@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class Poison : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] float activeTime = 20f;
 
-    // Update is called once per frame
-    void Update()
+    float currentActiveTime = Mathf.Infinity;
+
+    private void Update()
     {
-        
+        currentActiveTime += Time.deltaTime;
+        if(currentActiveTime > activeTime)
+        {
+            currentActiveTime = 0f;
+            enabled = false;
+        }
     }
 }
