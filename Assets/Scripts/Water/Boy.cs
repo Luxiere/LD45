@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -9,18 +8,15 @@ public class Boy : MonoBehaviour
 {
     [SerializeField] float waterTime = 5f;
     [SerializeField] Transform waterPos = null;
-    [SerializeField] UnityEvent waterEvent = null;
-    [SerializeField] UnityEvent stopWatering = null;
+    [SerializeField] NavMeshAgent agent = null;
 
+    public UnityEvent waterEvent = null;
+    public UnityEvent stopWatering = null;
+
+    private bool firstFrame = true;
 
     WaterBar waterBar;
-    NavMeshAgent agent;
     Vector3 init_pos;
-
-    private void Awake()
-    {
-        agent = GetComponent<NavMeshAgent>();
-    }
 
     private void Start()
     {
@@ -29,24 +25,37 @@ public class Boy : MonoBehaviour
 
     public IEnumerator WaterRoutine()
     {
-        while (true)
+        while (!MoveTowards(waterPos.position))
         {
-            if(MoveTowards(waterPos.position)) break;
+            yield return null;
         }
+
         waterEvent.Invoke();
+
         yield return new WaitForSeconds(waterTime);
+
         stopWatering.Invoke();
-        while (true)
+        agent.isStopped = false;
+
+
+        while (!MoveTowards(init_pos))
         {
-            if (MoveTowards(init_pos)) break;
+            yield return null;
         }
     }
 
     private bool MoveTowards(Vector3 destination)
     {
         agent.destination = destination;
-        if (Mathf.Approximately(agent.remainingDistance, 0) || Mathf.Approximately(agent.remainingDistance, Mathf.Infinity))
+        if (firstFrame)
         {
+            firstFrame = false;
+            return false;
+        }
+        if (Mathf.Approximately(agent.remainingDistance, 0))
+        {            
+            agent.isStopped = true;
+            firstFrame = true;
             return true;
         }
         return false;
