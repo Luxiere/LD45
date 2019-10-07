@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ornaments : MonoBehaviour
+public class OrnamentsController : MonoBehaviour
 {
     [System.Serializable]
     public class OrnamentTable
@@ -14,6 +14,8 @@ public class Ornaments : MonoBehaviour
 
     [SerializeField] OrnamentTable[] ornamentTables = null;
     [SerializeField] int waterGain = 15;
+
+    public static bool isWatering = false;
 
     private int currentOrnamentPoints = 0;
     private float maxWaterIntervalTime;
@@ -31,7 +33,7 @@ public class Ornaments : MonoBehaviour
     private void Update()
     {
         currentWaterIntervalTime += Time.deltaTime;
-        if (currentWaterIntervalTime >= maxWaterIntervalTime)
+        if (currentWaterIntervalTime >= maxWaterIntervalTime && !isWatering)
         {
             currentWaterIntervalTime = 0;
             Water();
@@ -41,13 +43,19 @@ public class Ornaments : MonoBehaviour
 
     private void Water()
     {
+        isWatering = true;
         plant.AddWater(waterGain);
         StartCoroutine(boy.WaterRoutine());
     }
 
+    private void CanWater()
+    {
+        isWatering = false;
+    }
+
     private float GetWaterTime()
     {
-        if (currentOrnamentPoints >= ornamentTables[ornamentTables.Length].ornamentPointsRequired) return ornamentTables[ornamentTables.Length].timeBetweenWatering;
+        if (currentOrnamentPoints >= ornamentTables[ornamentTables.Length -1].ornamentPointsRequired) return ornamentTables[ornamentTables.Length - 1].timeBetweenWatering;
         for (int i = 0; i < ornamentTables.Length; i++)
         {
             if (currentOrnamentPoints >= ornamentTables[i].ornamentPointsRequired && currentOrnamentPoints < ornamentTables[i].ornamentPointsRequired)

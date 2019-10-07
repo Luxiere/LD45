@@ -4,32 +4,8 @@ ModelImporter:
   serializedVersion: 26
   internalIDToNameTable:
   - first:
-      74: 885944232402757753
-    second: Armature|Action
-  - first:
-      74: -6513870522036437759
-    second: Armature|BezierCurveAction
-  - first:
       74: 3515170952244877179
     second: Armature|PickUp
-  - first:
-      74: -5934649280124288633
-    second: Armature|PickUp.001
-  - first:
-      74: -4274770991410265338
-    second: Armature|Walking
-  - first:
-      74: -2108476173976532896
-    second: Armature|Walking.001
-  - first:
-      74: 8610375296668905137
-    second: Armature|Walking.002
-  - first:
-      74: -4872597060481024711
-    second: BezierCurve|Action
-  - first:
-      74: 1016110808653482218
-    second: BezierCurve|BezierCurveAction
   - first:
       74: -6379075005750800374
     second: BezierCurve|Watering
