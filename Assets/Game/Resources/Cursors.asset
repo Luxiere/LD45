@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursorMappings:
   - type: 0
-    texture: {fileID: 2800000, guid: 6d41e058ff745f046ab0e940bfcccc76, type: 3}
+    texture: {fileID: 0}
     hotspot: {x: 0, y: 0}
   - type: 1
-    texture: {fileID: 2800000, guid: 8931eeb36c0efb448b0597786865dcef, type: 3}
+    texture: {fileID: 0}
     hotspot: {x: 0, y: 0}
   - type: 2
-    texture: {fileID: 2800000, guid: 517ff5bfd7a5b2344a784c4789523243, type: 3}
+    texture: {fileID: 0}
     hotspot: {x: 0, y: 0}
   - type: 3
     texture: {fileID: 0}

@@ -17,5 +17,6 @@ public class WaterUI : MonoBehaviour
     private void Update()
     {
         foreground.fillAmount = player.GetWaterFraction();
+        Debug.Log(player.GetWaterFraction());
     }
 }
