@@ -7264,8 +7264,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cbc1fe1279b51c4eb24c42a44159691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLightPoints: 100
-  gainRate: 5
+  maxLightPoints: 200
+  gainRate: 4
 --- !u!114 &1331289795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7308,8 +7308,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc715865ee13b04ea0e8b8ecb4aee82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthPoints: 100
-  decayRate: 4
+  maxHealthPoints: 200
+  decayRate: 6
 --- !u!1 &1337131879
 GameObject:
   m_ObjectHideFlags: 0
@@ -8796,6 +8796,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ornamentTables:
+  - timeBetweenWatering: 20
+    ornamentPointsRequired: 0
   - timeBetweenWatering: 10
     ornamentPointsRequired: 0
   waterGain: 15
@@ -9649,6 +9651,16 @@ PrefabInstance:
       propertyPath: events.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1216964756}
+    - target: {fileID: 457453558238173013, guid: b9d53db182e441041be385f66f02c1c9,
+        type: 3}
+      propertyPath: lightPrices.Array.data[0]
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 457453558238173013, guid: b9d53db182e441041be385f66f02c1c9,
+        type: 3}
+      propertyPath: lightPrices.Array.data[1]
+      value: 60
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9d53db182e441041be385f66f02c1c9, type: 3}
 --- !u!1 &1467469556932530623

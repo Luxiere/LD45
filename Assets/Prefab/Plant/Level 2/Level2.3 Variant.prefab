@@ -24,40 +24,55 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level2.3 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 190786207726516213, guid: 1dbcaf4a124abe0418464fdb21bd6fb6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 190786207726516213, guid: 1dbcaf4a124abe0418464fdb21bd6fb6,
+        type: 3}
+      propertyPath: m_Name
+      value: Berry
+      objectReference: {fileID: 0}
+    - target: {fileID: 190786207726516213, guid: 1dbcaf4a124abe0418464fdb21bd6fb6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Inactive
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 1dbcaf4a124abe0418464fdb21bd6fb6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -6.63
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 1dbcaf4a124abe0418464fdb21bd6fb6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 15.07
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 1dbcaf4a124abe0418464fdb21bd6fb6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -29.399998
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 1dbcaf4a124abe0418464fdb21bd6fb6,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 1dbcaf4a124abe0418464fdb21bd6fb6,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.32255486
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 1dbcaf4a124abe0418464fdb21bd6fb6,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 1dbcaf4a124abe0418464fdb21bd6fb6,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.94655085
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 1dbcaf4a124abe0418464fdb21bd6fb6,
         type: 3}
@@ -78,21 +93,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 190786207726516213, guid: 1dbcaf4a124abe0418464fdb21bd6fb6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 190786207726516213, guid: 1dbcaf4a124abe0418464fdb21bd6fb6,
-        type: 3}
-      propertyPath: m_Name
-      value: Berry
-      objectReference: {fileID: 0}
-    - target: {fileID: 190786207726516213, guid: 1dbcaf4a124abe0418464fdb21bd6fb6,
-        type: 3}
-      propertyPath: m_TagString
-      value: Inactive
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1dbcaf4a124abe0418464fdb21bd6fb6, type: 3}
