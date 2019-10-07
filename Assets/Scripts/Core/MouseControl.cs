@@ -21,6 +21,7 @@ public class MouseControl : MonoBehaviour
     {
         if (TurnCamera()) return;
         if (InteractWithComponent()) return;
+        customCursor.SetCursor(CursorType.Default);
     }
 
     private void LookRotation()

@@ -8,11 +8,8 @@ public class WaterPickup : MonoBehaviour, IClickable
 
     public void Click()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            WaterBar water = GameObject.FindWithTag("Water").GetComponent<WaterBar>();
-            water.AddWater(addAmount);
-        }
+        WaterBar water = GameObject.FindWithTag("Player").GetComponent<WaterBar>();
+        water.AddWater(addAmount * Time.deltaTime);
     }
 
     public CursorType GetCursorType()

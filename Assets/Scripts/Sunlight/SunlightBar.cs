@@ -22,7 +22,12 @@ public class SunlightBar : MonoBehaviour
         GainLight();
     }
 
-    private void GainLight()
+    public int GetCurrentPoints()
+    {
+        return currentLightPoints;
+    }
+
+    public void GainLight()
     {
         currentTimer -= Time.deltaTime;
         if (currentTimer <= 0)

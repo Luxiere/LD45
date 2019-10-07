@@ -16,9 +16,9 @@ public class WaterBar : MonoBehaviour
         currentHealthPoints = maxHealthPoints;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        LoseWater(decayRate / 50);
+        LoseWater(decayRate * Time.deltaTime);
     }
 
     private void DeathCheck()

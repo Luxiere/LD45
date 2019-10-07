@@ -10,7 +10,6 @@ public class LookAtPlant : MonoBehaviour
         plant = GameObject.FindWithTag("Player").transform;
     }
 
-    // Update is called once per frame
     void Update()
     {
         transform.LookAt(plant);
