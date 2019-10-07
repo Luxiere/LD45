@@ -20,10 +20,12 @@ public class Ornaments : MonoBehaviour
     private float currentWaterIntervalTime = Mathf.Infinity;
 
     private WaterBar plant;
+    private Boy boy;
 
     private void Awake()
     {
         plant = GameObject.FindWithTag("Player").GetComponent<WaterBar>();
+        boy = GameObject.FindWithTag("Boy").GetComponent<Boy>();
     }
 
     private void Update()
@@ -40,6 +42,7 @@ public class Ornaments : MonoBehaviour
     private void Water()
     {
         plant.AddWater(waterGain);
+        StartCoroutine(boy.WaterRoutine());
     }
 
     private float GetWaterTime()
