@@ -1,20 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class SunlightUI : MonoBehaviour
 {
-    Text text;
-    SunlightBar bar;
-    private void Awake()
+    // Start is called before the first frame update
+    void Start()
     {
-        bar = GameObject.FindWithTag("Player").GetComponent<SunlightBar>();
-        text = GetComponent<Text>();
+        
     }
 
-    private void Update()
+    // Update is called once per frame
+    void Update()
     {
-        text.text = string.Format("{0}", bar.GetCurrentPoints());
+        
     }
 }
