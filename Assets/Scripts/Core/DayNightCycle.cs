@@ -41,7 +41,7 @@ public class DayNightCycle : MonoBehaviour
 
     private void NightCycle()
     {
-        transform.rotation = Quaternion.Euler(new Vector3(Mathf.Lerp(midDayAlt, midNight, currentTime / daytime), init_Rot.y, init_Rot.z));
+        transform.rotation = Quaternion.Euler(new Vector3(Mathf.Lerp(midDayAlt, midNight, currentTime / nighttime), init_Rot.y, init_Rot.z));
         if (Timer())
         {
             currentTime = daytime;
