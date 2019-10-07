@@ -336,7 +336,7 @@ Transform:
   - {fileID: 1331289793}
   - {fileID: 221163426}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &696090470
 MonoBehaviour:
@@ -662,7 +662,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -465, y: 222}
+  m_AnchoredPosition: {x: -391, y: 179}
   m_SizeDelta: {x: 171, y: 194}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1105800515
@@ -683,10 +683,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8993869644678559354, guid: e6c2652adebbfb249a347ac4e4052b18,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: cb62a3b6069f4904dbdc44d1a42b3bbb, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -872,7 +871,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 4b02cc2af750c8f45b88f4b637fb2ef5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4b02cc2af750c8f45b88f4b637fb2ef5,
         type: 3}
@@ -1208,8 +1207,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 393, y: -286}
-  m_SizeDelta: {x: 225, y: 215}
+  m_AnchoredPosition: {x: 405.4, y: -265}
+  m_SizeDelta: {x: 146.2, y: 136.2}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1705868294
 MonoBehaviour:
@@ -1241,7 +1240,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 765084694288557597, guid: e6c2652adebbfb249a347ac4e4052b18, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5f404660e793cab429bdc0660206a513, type: 3}
   m_Type: 3
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1293,7 +1292,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -357.4, y: 256.2}
+  m_AnchoredPosition: {x: -277, y: 189}
   m_SizeDelta: {x: 97.1, y: 57.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1915732170
@@ -1316,7 +1315,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
+    m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 5
