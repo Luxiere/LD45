@@ -8,7 +8,7 @@ public class WaterPickup : MonoBehaviour, IClickable
 
     public void Click()
     {
-        WaterBar water = GameObject.FindWithTag("Water").GetComponent<WaterBar>();
+        WaterBar water = GameObject.FindWithTag("Player").GetComponent<WaterBar>();
         water.AddWater(addAmount * Time.deltaTime);
     }
 
